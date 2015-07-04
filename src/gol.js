@@ -24,13 +24,14 @@ var matrice = [
                 this.nextGeneration(matrix);
             },
             nextGeneration: function (stato) {
+                var newState = [];
                 for (x = 0; x < stato.length; x++) {
                     for (y = 0; y < stato[x].length; y++) {
-                        this.applicoRegola(x,y);
+                        newState[x][y] = this.applicoRegola(x,y) === true ? 1 : 0;
                     }
                 }
             },
-            applicoRegola: function (x, y, regola) {
+            applicoRegola: function (x, y) {    // da rinominare a applicoRegole
                 // sanity check
                 if (typeof startMatrice === "undefined" || startMatrice.length === 0) {
                     return false;
@@ -54,6 +55,7 @@ var matrice = [
                     }
                 }
                 if (contatoreVicini !== 0) {
+                    // controllo le regole e poi torno true se alive o false se die
                     return contatoreVicini;
                 }
                 return false;
