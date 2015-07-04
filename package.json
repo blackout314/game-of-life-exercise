@@ -1,0 +1,11 @@
+{
+  "name": "gol",
+  "version": "0.0.1",
+  "devDependencies": {
+    "karma": "~0.10",
+    "karma-qunit": "~0.1"
+  },
+  "scripts": {
+    "test": "node ./node_modules/karma/bin/karma start"
+  }
+}
