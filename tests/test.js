@@ -30,6 +30,5 @@ test('tdd esercizio applicoRegola torna false se non è presente la cella', func
 test('tdd esercizio applicoRegola torna numero vicini se esistono', function() {
     esercizio.init([ [0,1,1], [1,1,1], [0,0,0] ]);
     var vicini = esercizio.applicoRegola(1,1,"fakeregola");
-    console.log('vicini ' + vicini);
     ok(vicini === 4);
 });
