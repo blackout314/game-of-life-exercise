@@ -1,9 +1,9 @@
 module.exports = function(config) {
   config.set({
 	autoWatch: false,
-	singleRun: true,
+	singleRun: false,
     basePath: '.',
-    frameworks: ['qunit'],
+    frameworks: ['qunit','sinon'],
 	reporters: ['progress'],
 	preprocessors: {
     },
